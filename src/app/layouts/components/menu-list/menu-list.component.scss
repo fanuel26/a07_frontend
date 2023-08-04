@@ -1,0 +1,30 @@
+.input {
+    &:focus {
+        box-shadow: none;
+        border-color: #3732CC;
+    }
+
+    &::placeholder {
+        color: #8F93BE !important;
+    }
+}
+
+.navbar-light {
+    .nav-item {
+        .nav-link {
+            color: #8F93BE !important;
+
+            &:hover {
+                color: #3732CC !important;
+            }
+
+            &.text-g {
+                color: #32CCC2 !important;
+
+                &:hover {
+                    color: #259991 !important;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.input:focus {
+  box-shadow: none;
+  border-color: #3732CC;
+}
+.input::-moz-placeholder {
+  color: #8F93BE !important;
+}
+.input:-ms-input-placeholder {
+  color: #8F93BE !important;
+}
+.input::placeholder {
+  color: #8F93BE !important;
+}
+
+.navbar-light .nav-item .nav-link {
+  color: #8F93BE !important;
+}
+.navbar-light .nav-item .nav-link:hover {
+  color: #3732CC !important;
+}
+.navbar-light .nav-item .nav-link.text-g {
+  color: #32CCC2 !important;
+}
+.navbar-light .nav-item .nav-link.text-g:hover {
+  color: #259991 !important;
+}/*# sourceMappingURL=menu-list.component.css.map */
