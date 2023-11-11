@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WebsiteService } from '../../common/website.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,8 @@ import { WebsiteService } from '../../common/website.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  dataPub: any;
+  env: string = environment.apiUrl
   constructor(private websiteService: WebsiteService) { }
 
   ngOnInit(): void {
@@ -17,6 +19,9 @@ export class HomeComponent implements OnInit {
   getListPub() {
     this.websiteService.listPub().subscribe((value) => {
       console.log(value)
+      if (value) {
+        this.dataPub = value
+      }
     })
   }
 }

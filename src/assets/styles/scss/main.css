@@ -334,4 +334,12 @@ body {
   background-color: #a30f1c !important;
   color: #fff !important;
   transition: all ease-in-out 0.5s;
+}
+
+.form-control {
+  font-size: 14px;
+}
+.form-control:focus {
+  box-shadow: none;
+  border-color: #bd1522;
 }/*# sourceMappingURL=main.css.map */

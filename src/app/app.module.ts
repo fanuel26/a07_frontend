@@ -16,7 +16,7 @@ import { ConfigInterceptor } from './common/config.interceptor';
     HttpClientModule,
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: ConfigInterceptor, multi: true },
+    // { provide: HTTP_INTERCEPTORS, useClass: ConfigInterceptor, multi: true },
   ],
   bootstrap: [AppComponent]
 })

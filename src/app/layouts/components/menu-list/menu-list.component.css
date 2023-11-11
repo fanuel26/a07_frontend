@@ -5,9 +5,6 @@
 .input::-moz-placeholder {
   color: #8F93BE !important;
 }
-.input:-ms-input-placeholder {
-  color: #8F93BE !important;
-}
 .input::placeholder {
   color: #8F93BE !important;
 }

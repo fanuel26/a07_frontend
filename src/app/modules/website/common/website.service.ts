@@ -10,7 +10,11 @@ export class WebsiteService {
   constructor(private httpService: HttpService) { }
 
   listPub() {
-    // return this.httpService.getRequest('/article/published/all');
-    return this.httpService.getRequest('/posts');
+    return this.httpService.getRequest('/article/published/all');
+  }
+
+
+  listPortfolio() {
+    return this.httpService.getRequest('/portfolio/published/all');
   }
 }

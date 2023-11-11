@@ -5,8 +5,9 @@
 export const environment = {
   production: false,
 
-  // apiUrl: 'http://31.170.165.77:8080'
-  apiUrl: 'https://jsonplaceholder.typicode.com'
+  apiUrl: 'http://31.170.165.77:8080/api/v1'
+  // apiUrl: 'http://api.agence07.net/api/v1'
+  // apiUrl: 'https://jsonplaceholder.typicode.com'
 };
 
 /*

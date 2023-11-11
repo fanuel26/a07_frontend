@@ -243,7 +243,7 @@ body {
         transition: all 0.3s ease-in;
     }
 }
- 
+
 .img-pub-card {
     border-radius: 0px;
 
@@ -354,4 +354,12 @@ body {
             transition: all ease-in-out 0.5s;
         }
     }
+}
+
+.form-control {
+  font-size: 14px;
+  &:focus {
+    box-shadow: none;
+    border-color: $primary;
+  }
 }
