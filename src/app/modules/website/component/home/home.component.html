@@ -340,7 +340,7 @@
             <div class="col-md-6">
               <div class="row my-4">
                 <div class="card border-0 bg-none p-4 mb-4">
-                  <img :src="env+'/files/'+item.imageCoverPath" class="img-fluid border-radius" alt="" />
+                  <img [src]="env + '/files/get?object=' + item.imageCoverPath" class="img-fluid border-radius" alt="" />
                   <!-- ./assets/images/packs/01.jpg -->
                 </div>
               </div>

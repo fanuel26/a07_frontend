@@ -1,0 +1,39 @@
+# version: '3.5'
+
+# services:
+
+#   angular-service:
+#     container_name: la_capitale_front
+#     build: ./dev
+#     volumes:
+#       - './esmc_front:/usr/src/app'
+#     ports:
+#       - '4200:4200'
+
+version: "3"
+
+services:
+    # la_capitale_front:
+    la_capitale_front:
+      #container_name: la_capitale_web
+      container_name: la_capitale_front
+      #hostname: dp-senyo
+      # image: esmc-web:v1
+      # image: perce26/entrersortie:la_capitale_front
+      build:
+        context: .
+        dockerfile: Dockerfile
+      restart: always
+      #command: tail -F anyts
+      ports:
+       #- "3000:3000"
+       - "4500:80"
+      #environment:
+       #- API_BASE_URL=http://160.242.199.14:8888
+      networks:
+        - my-srv-net
+
+networks:
+  my-srv-net:
+    # external:
+        name: my-ng-net

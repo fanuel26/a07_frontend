@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   constructor(private websiteService: WebsiteService) { }
 
   ngOnInit(): void {
+    console.log(this.env)
     this.getListPub();
   }
 
