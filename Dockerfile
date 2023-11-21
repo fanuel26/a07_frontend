@@ -37,7 +37,7 @@ RUN rm -rf /usr/share/nginx/html/*
 
 COPY src/app/conf/default.conf /etc/nginx/conf.d/
 
-COPY --from=builder /app/dist/la_capitale_front /usr/share/nginx/html
+COPY --from=builder /app/dist/a07_frontend /usr/share/nginx/html
 
 # COPY --from=builder /app-osr/scripts/replace_api_url.sh /
 

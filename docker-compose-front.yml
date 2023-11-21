@@ -3,7 +3,7 @@
 # services:
 
 #   angular-service:
-#     container_name: la_capitale_front
+#     container_name: a07_front
 #     build: ./dev
 #     volumes:
 #       - './esmc_front:/usr/src/app'
@@ -13,13 +13,13 @@
 version: "3"
 
 services:
-    # la_capitale_front:
-    la_capitale_front:
-      #container_name: la_capitale_web
-      container_name: la_capitale_front
+    # a07_front:
+    a07_front:
+      #container_name: a07_web
+      container_name: a07_front
       #hostname: dp-senyo
       # image: esmc-web:v1
-      # image: perce26/entrersortie:la_capitale_front
+      # image: perce26/entrersortie:a07_front
       build:
         context: .
         dockerfile: Dockerfile
