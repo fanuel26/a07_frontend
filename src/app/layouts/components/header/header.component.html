@@ -22,18 +22,18 @@
           <ul class="navbar-nav me-auto mt-2 mt-lg-0"></ul>
           <ul class="navbar-nav mt-2 mt-lg-0">
             <li class="nav-item mt-1 mx-3">
-              <a class="nav-link active" href="/" aria-current="page"
+              <a [class]="route.url == '/' ? 'nav-link active' : 'nav-link'" href="/" aria-current="page"
                 >Accueil</a
               >
             </li>
             <li class="nav-item mt-1 mx-3">
-              <a class="nav-link" href="/service">Services</a>
+              <a [class]="route.url == '/service' ? 'nav-link active' : 'nav-link'" href="/service">Services</a>
             </li>
             <li class="nav-item mt-1 mx-3">
-              <a class="nav-link" href="/portfolio">Portfolio</a>
+              <a [class]="route.url == '/portfolio' ? 'nav-link active' : 'nav-link'" href="/portfolio">Portfolio</a>
             </li>
             <li class="nav-item mt-1 mx-3">
-              <a class="nav-link" href="/about">A propos</a>
+              <a [class]="route.url == '/about' ? 'nav-link active' : 'nav-link'" href="/about">A propos</a>
             </li>
             <li class="nav-item ml-4">
               <a class="nav-link btn btn-primary btn-block w-100" href="/devis"
