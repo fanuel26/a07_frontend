@@ -18,6 +18,10 @@ export class WebsiteService {
     return this.httpService.getRequest('/portfolio/published/all');
   }
 
+  listCarousel() {
+    return this.httpService.getRequest('/caroussel/all');
+  }
+
   saveDevis(body: any) {
     return this.httpService.postRequest('/demandes/save', body);
   }

@@ -10,12 +10,14 @@ import { environment } from 'src/environments/environment';
 export class HomeComponent implements OnInit {
   dataPub: any;
   dataPortfolio: any;
+  dataCarousel: any;
   env: string = environment.apiUrl
   constructor(private websiteService: WebsiteService) { }
 
   ngOnInit(): void {
     console.log(this.env)
     this.getListPub();
+    this.getlistCarousel();
     this.getListPortfolio()
   }
 
@@ -27,6 +29,17 @@ export class HomeComponent implements OnInit {
       }
     })
   }
+
+  getlistCarousel() {
+    this.websiteService.listCarousel().subscribe((value) => {
+      console.log(value)
+      if (value) {
+        this.dataCarousel = value
+      }
+    })
+  }
+
+
 
 
   getListPortfolio() {

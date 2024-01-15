@@ -25,20 +25,18 @@
         </h3>
       </div> -->
       <div class="col-md-4 brd border-left border-bottom" *ngFor="let item of dataPortfolio">
-        <div class="card py-4 px-1 border-0 nav-card">
-          <img [src]="env + '/files/get?object=' + item.imageCoverPath" class="img-fluid img-service"
-                    alt="" />
-          <!-- <img src="./assets/images/banner/01.jpg"  alt="" /> -->
-          <h4 class="text-dark mt-4 fw-bold">{{ item.title}}</h4>
-          <small class="text-primary fw-bold">{{ item.category.name }}</small>
-          <div class="mt-3">
-            <p class="description" style="white-space: pre-line;" [innerHTML]="item.description.substr(0, 300)">
-            </p>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detail">
-              Lire plus <i class="mdi mdi-arrow-right"></i>
-            </button>
+        <a href="#" class="text-dark" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#detail">
+          <div class="card py-4 px-1 border-0 nav-card">
+            <img [src]="env + '/files/get?object=' + item.imageCoverPath" class="img-fluid img-service" alt="" />
+            <!-- <img src="./assets/images/banner/01.jpg"  alt="" /> -->
+            <h4 class="text-dark mt-4 fw-bold">{{ item.title}}</h4>
+            <small class="text-primary fw-bold">{{ item.category.name }}</small>
+            <div class="mt-3">
+              <p class="description" style="white-space: pre-line;" [innerHTML]="item.description.substr(0, 300)">
+              </p>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
       <!-- <div class="col-md-4 brd border-left border-bottom">
         <div class="card py-4 px-1 border-0 nav-card">
@@ -413,12 +411,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-          Close
-        </button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>

@@ -1,10 +1,10 @@
 <section class="top">
   <div class="container">
     <div class="row">
-      <div class="col-md-12 mb-4">
+      <div class="col-md-6 offset-md-3 mb-4">
         <img [src]="env + '/files/get?object=' + dataPub?.imageCoverPath" class="img-fluid img8 w-100" alt="" />
       </div>
-      <div class="col-md-12">
+      <div class="col-md-6 offset-md-3">
         <div class="bar left">
           <div class="bary"></div>
           <h5>{{ dataPub?.category.name }}</h5>
@@ -14,7 +14,7 @@
             {{ dataPub?.title }}
           </h3>
           <div class="mt-4">
-            <p style="white-space: pre-line;">{{ dataPub?.content }}</p>
+            <p class="description" style="white-space: pre-line;">{{ dataPub?.content }}</p>
           </div>
         </div>
         <div class="my-5">
