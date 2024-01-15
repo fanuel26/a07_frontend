@@ -19,35 +19,28 @@
     </div>
 
     <div class="row my-5">
-      <div class="col-md-12 mb-4">
+      <!-- <div class="col-md-12 mb-4">
         <h3 class="fw-bold text-primary">
           <i class="mdi mdi-arrow-right mx-4 title"></i> Les Sites Web
         </h3>
-      </div>
-      <!-- <div class="col-md-4 brd border-bottom">
+      </div> -->
+      <div class="col-md-4 brd border-left border-bottom" *ngFor="let item of dataPortfolio">
         <div class="card py-4 px-1 border-0 nav-card">
-          <img
-            src="./assets/images/banner/01.jpg"
-            class="img-fluid img-service"
-            alt=""
-          />
-          <h4 class="text-dark mt-4 fw-bold">Strategie de communication</h4>
+          <img [src]="env + '/files/get?object=' + item.imageCoverPath" class="img-fluid img-service"
+                    alt="" />
+          <!-- <img src="./assets/images/banner/01.jpg"  alt="" /> -->
+          <h4 class="text-dark mt-4 fw-bold">{{ item.title}}</h4>
+          <small class="text-primary fw-bold">{{ item.category.name }}</small>
           <div class="mt-3">
-            <p class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis, eaque!
+            <p class="description" style="white-space: pre-line;" [innerHTML]="item.description.substr(0, 300)">
             </p>
-            <button
-              class="btn btn-primary"
-              data-bs-toggle="modal"
-              data-bs-target="#detail"
-            >
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detail">
               Lire plus <i class="mdi mdi-arrow-right"></i>
             </button>
           </div>
         </div>
       </div>
-      <div class="col-md-4 brd border-left border-bottom">
+      <!-- <div class="col-md-4 brd border-left border-bottom">
         <div class="card py-4 px-1 border-0 nav-card">
           <img
             src="./assets/images/banner/01.jpg"
@@ -145,12 +138,12 @@
     </div>
 
     <div class="row top">
-      <div class="col-md-12 my-4">
+      <!-- <div class="col-md-12 my-4">
         <h3 class="fw-bold text-primary">
           <i class="mdi mdi-arrow-right mx-4 title"></i> Identité visuelle
           de la marque
         </h3>
-      </div>
+      </div> -->
       <!-- <div class="col-md-4 brd border-bottom">
         <div class="card py-4 px-1 border-0 nav-card">
           <img
@@ -268,11 +261,11 @@
     </div>
 
     <div class="row top">
-      <div class="col-md-12 my-4">
+      <!-- <div class="col-md-12 my-4">
         <h3 class="fw-bold text-primary">
           <i class="mdi mdi-arrow-right mx-4 title"></i> Evenementielle
         </h3>
-      </div>
+      </div> -->
       <!-- <div class="col-md-4 brd border-bottom">
         <div class="card py-4 px-1 border-0 nav-card">
           <img

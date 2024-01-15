@@ -323,13 +323,13 @@
                 <h3 class="title text-dark">{{ item.title }}</h3>
                 <h6 class="text-primary">{{ item.category.name }}</h6>
               </div>
-              <div class="my-5">
-                <p class="description text-dark">
-                  {{ item.content }}
+              <div class="my-5" >
+                <p class="description text-dark" style="white-space: pre-line;">
+                {{ item.content.substr(0, 800) }} ....
                 </p>
                 <div class="my-4">
-                  <a target="_blank"
-                    href="https://www.linkedin.com/posts/ferdinand-kpodzro-051761b3_slemfit-activity-7053317656510132224-gT2c?utm_source=share&utm_medium=member_desktop"
+                  <a
+                    href="/article/1"
                     class="btn btn-primary">
                     Lire plus <i class="mdi mdi-arrow-right"></i>
                   </a>
@@ -340,7 +340,8 @@
             <div class="col-md-6">
               <div class="row my-4">
                 <div class="card border-0 bg-none p-4 mb-4">
-                  <img [src]="env + '/files/get?object=' + item.imageCoverPath" class="img-fluid border-radius" alt="" />
+                  <img [src]="env + '/files/get?object=' + item.imageCoverPath" class="img-fluid border-radius"
+                    alt="" />
                   <!-- ./assets/images/packs/01.jpg -->
                 </div>
               </div>
@@ -459,31 +460,28 @@
             <h4 class="text-primary">
               <i class="mdi mdi-monitor title"></i>
             </h4>
-            <h5 class="fw-bold mx-4">Des Sites Web</h5>
+            <h5 class="fw-bold mx-4">Projets</h5>
           </div>
-          <!-- <div class="col-md-6 mb-4 brd">
+          <div class="col-md-6 mb-4 brd border-left border-bottom"  *ngFor="let item of dataPortfolio">
             <div class="card p-4 border-0 bg-white nav-card">
               <div class="mb-4">
-                <img src="./assets/images/agence/9.jpg" class="img-fluid img-portfolio" alt="" />
+                <img [src]="env + '/files/get?object=' + item.imageCoverPath" class="img-fluid img-portfolio" alt="" />
               </div>
               <div>
-                <h5 class="fw-bold">Royal Hotel Tchamba</h5>
+                <h5 class="fw-bold">{{ item.title}}</h5>
                 <div class="my-4">
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing
-                    elit. Iste rem ipsam ducimus doloremque cum fugit nulla
-                    asperiores odit nihil.
+                  <p class="description" style="white-space: pre-line;" [innerHTML]="item.description.substr(0, 300)">
                   </p>
                 </div>
-                <div class="my-4">
+                <!-- <div class="my-4">
                   <h4>
                     <a href="#">Visiter le site <i class="mdi mdi-arrow-right"></i></a>
                   </h4>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
-          <div class="col-md-6 mb-4 brd border-left">
+          <!-- <div class="col-md-6 mb-4 brd border-left">
             <div class="card p-4 border-0 bg-white nav-card">
               <div class="mb-4">
                 <img src="./assets/images/agence/10.jpg" class="img-fluid img-portfolio" alt="" />
@@ -507,12 +505,12 @@
           </div> -->
         </div>
         <div class="row my-5">
-          <div class="col-md-12 mb-4 d-flex justify-content-start align-items-center">
+         <!--  <div class="col-md-12 mb-4 d-flex justify-content-start align-items-center">
             <h4 class="text-primary">
               <i class="mdi mdi-monitor title"></i>
             </h4>
             <h5 class="fw-bold mx-4">Identité visuelle de la marque</h5>
-          </div>
+          </div> -->
           <!-- <div class="col-md-6 mb-4 brd">
             <div class="card p-4 border-0 bg-white nav-card">
               <div class="mb-4">

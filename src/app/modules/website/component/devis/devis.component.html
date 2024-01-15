@@ -14,36 +14,70 @@
         <img src="./assets/images/service/dev.jpg" class="img-fluid" alt="" />
       </div>
       <div class="col-md-6 my-4">
-        <form action="" method="post">
+        <form [formGroup]="devisForm" (ngSubmit)="onSubmit()">
           <div class="row">
             <div class="col-md-6 mb-4 form-group">
               <label for="">Nom*</label>
-              <input type="text" class="form-control form-control-lg input" placeholder="Nom">
+              <input type="text" placeholder="Nom" formControlName="nom" [ngClass]="
+              devisForm.get('nom')?.invalid &&
+              devisForm.get('nom')?.touched
+                ? 'form-control form-control-lg input is-invalid'
+                : 'form-control form-control-lg input'
+            ">
             </div>
             <div class="col-md-6 mb-4 form-group">
               <label for="">Prenom*</label>
-              <input type="text" class="form-control form-control-lg input" placeholder="Prenom">
+              <input type="text" formControlName="prenoms" [ngClass]="
+              devisForm.get('prenoms')?.invalid &&
+              devisForm.get('prenoms')?.touched
+                ? 'form-control form-control-lg input is-invalid'
+                : 'form-control form-control-lg input'
+            " placeholder="Prenom">
             </div>
             <div class="col-md-6 mb-4 form-group">
               <label for="">Numero de téléphone*</label>
-              <input type="tel" class="form-control form-control-lg input" placeholder="Numero de téléphone">
+              <input type="tel" formControlName="telephone" [ngClass]="
+              devisForm.get('telephone')?.invalid &&
+              devisForm.get('telephone')?.touched
+                ? 'form-control form-control-lg input is-invalid'
+                : 'form-control form-control-lg input'
+            " placeholder="Numero de téléphone">
             </div>
             <div class="col-md-6 mb-4 form-group">
               <label for="">Email*</label>
-              <input type="email" class="form-control form-control-lg input" placeholder="Adresse email">
+              <input type="email" formControlName="email" [ngClass]="
+              devisForm.get('email')?.invalid &&
+              devisForm.get('email')?.touched
+                ? 'form-control form-control-lg input is-invalid'
+                : 'form-control form-control-lg input'
+            " placeholder="Adresse email">
             </div>
             <div class="col-md-6 mb-4 form-group">
               <label for="">Nom du projet</label>
-              <input type="projet" class="form-control form-control-lg input" placeholder="Nom du projet">
+              <input type="projet" formControlName="nomProjet" [ngClass]="
+              devisForm.get('nomProjet')?.invalid &&
+              devisForm.get('nomProjet')?.touched
+                ? 'form-control form-control-lg input is-invalid'
+                : 'form-control form-control-lg input'
+            " placeholder="Nom du projet">
             </div>
             <div class="col-md-6 mb-4 form-group">
               <label for="">Domaine*</label>
-              <input type="domaine" class="form-control form-control-lg input" placeholder="Domaine">
+              <input type="domaine" formControlName="nomDomaine" [ngClass]="
+              devisForm.get('nomDomaine')?.invalid &&
+              devisForm.get('nomDomaine')?.touched
+                ? 'form-control form-control-lg input is-invalid'
+                : 'form-control form-control-lg input'
+            " placeholder="Domaine">
             </div>
             <div class="col-md-12 mb-4 form-group">
               <label for="">Description*</label>
-              <textarea type="domaine" class="form-control form-control-lg input" rows="10" cols="10"
-                placeholder="Description"></textarea>
+              <textarea type="domaine" formControlName="description" [ngClass]="
+              devisForm.get('description')?.invalid &&
+              devisForm.get('description')?.touched
+                ? 'form-control form-control-lg input is-invalid'
+                : 'form-control form-control-lg input'
+            " rows="10" cols="10" placeholder="Description"></textarea>
             </div>
             <div class="col-md-12 mb-4 form-group">
               <button class="btn btn-primary">Envoyer</button>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WebsiteService } from '../../common/website.service';
 import { environment } from 'src/environments/environment';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-portfolio',
@@ -10,11 +11,13 @@ import { environment } from 'src/environments/environment';
 export class PortfolioComponent implements OnInit {
   dataPortfolio: any;
   env: string = environment.apiUrl
-  constructor(private websiteService: WebsiteService) { }
+  constructor(private websiteService: WebsiteService, public sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
     this.getListPortfolio();
   }
+
+  
 
   getListPortfolio() {
     this.websiteService.listPortfolio().subscribe((value) => {

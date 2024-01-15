@@ -10,7 +10,9 @@ import { PortfolioComponent } from './component/portfolio/portfolio.component';
 import { AboutComponent } from './component/about/about.component';
 import { DevisComponent } from './component/devis/devis.component';
 import { ServiceDetailComponent } from './component/service-detail/service-detail.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { PubComponent } from './component/pub/pub.component';
+import { ArticleComponent } from './component/article/article.component';
 
 @NgModule({
   declarations: [
@@ -20,12 +22,15 @@ import { ServiceDetailComponent } from './component/service-detail/service-detai
     PortfolioComponent,
     AboutComponent,
     DevisComponent,
-    ServiceDetailComponent
+    ServiceDetailComponent,
+    PubComponent,
+    ArticleComponent
   ],
   imports: [
     CommonModule,
     WebsiteRoutingModule,
-    LayoutsModule
+    LayoutsModule,
+    ReactiveFormsModule
   ]
 })
 export class WebsiteModule { }

@@ -7,6 +7,7 @@ import { PortfolioComponent } from './component/portfolio/portfolio.component';
 import { DevisComponent } from './component/devis/devis.component';
 import { AboutComponent } from './component/about/about.component';
 import { ServiceDetailComponent } from './component/service-detail/service-detail.component';
+import { ArticleComponent } from './component/article/article.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
       {
         path: '',
         component: HomeComponent,
+      },
+      {
+        path: 'article/:id',
+        component: ArticleComponent,
       },
       {
         path: 'service',
