@@ -9,7 +9,8 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent implements OnInit {
-  dataPortfolio: any;
+  dataPortfolio: any = [];
+  dataSelect: any = {};
   env: string = environment.apiUrl
   constructor(private websiteService: WebsiteService, public sanitizer: DomSanitizer) { }
 
@@ -17,7 +18,7 @@ export class PortfolioComponent implements OnInit {
     this.getListPortfolio();
   }
 
-  
+
 
   getListPortfolio() {
     this.websiteService.listPortfolio().subscribe((value) => {
@@ -26,5 +27,9 @@ export class PortfolioComponent implements OnInit {
         this.dataPortfolio = value
       }
     })
+  }
+
+  getData(data: any) {
+    this.dataSelect = data
   }
 }

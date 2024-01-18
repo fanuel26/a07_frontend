@@ -25,15 +25,17 @@
         </h3>
       </div> -->
       <div class="col-md-4 brd border-left border-bottom" *ngFor="let item of dataPortfolio">
-        <a href="#" class="text-dark" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#detail">
+        <a href="#" class="text-dark" (click)="getData(item)" style="text-decoration: none;" data-bs-toggle="modal"
+          data-bs-target="#detail">
           <div class="card py-4 px-1 border-0 nav-card">
-            <img [src]="env + '/files/get?object=' + item.imageCoverPath" class="img-fluid img-service" alt="" />
+            <img [src]="env + '/files/get?object=' + item?.image_cover_path[0].imageName" class="img-fluid img-service"
+              alt="" />
             <!-- <img src="./assets/images/banner/01.jpg"  alt="" /> -->
             <h4 class="text-dark mt-4 fw-bold">{{ item.title}}</h4>
-            <small class="text-primary fw-bold">{{ item.category.name }}</small>
+            <!-- <small class="text-primary fw-bold">{{ item.category.name }}</small> -->
             <div class="mt-3">
-              <p class="description" style="white-space: pre-line;" [innerHTML]="item.description.substr(0, 300)">
-              </p>
+              <!-- <p class="description" style="white-space: pre-line;" [innerHTML]="item.description.substr(0, 1000)"> -->
+              <!-- </p> -->
             </div>
           </div>
         </a>
@@ -387,8 +389,8 @@
   <div class="modal-dialog modal-fullscreen">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">
-          Portfolio
+        <h5 class="modal-title text-primary" id="exampleModalLabel">
+          {{ dataSelect.title }}
         </h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
@@ -398,15 +400,14 @@
             <div class="col-md-12 mb-4">
               <div class="bar left">
                 <div class="bary"></div>
-                <h5>Strategie de communication</h5>
+                <h5>{{ dataSelect.title }}</h5>
               </div>
               <div class="my-2">
-                <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit
-                  amet,
-                  consectetur adipisicing elit. Aspernatur facilis accusantium amet suscipit deserunt inventore,
-                  iusto natus quos, nobis autem, hic sequi! Laudantium veritatis repudiandae reprehenderit ab quasi
-                  porro sequi.</p>
-
+                <p class="description" style="white-space: pre-line;" [innerHTML]="dataSelect.description">
+                </p>
+              </div>
+              <div class="my-2" *ngFor="let item of dataSelect.image_cover_path">
+                <img [src]="env + '/files/get?object=' + item.imageName" class="img-fluid" alt="" />
               </div>
             </div>
           </div>
