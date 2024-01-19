@@ -471,7 +471,7 @@
           <div class="col-md-6 mb-4 brd border-left border-bottom" *ngFor="let item of dataPortfolio">
             <div class="card p-4 border-0 bg-white nav-card">
               <div class="mb-4">
-                <img [src]="env + '/files/get?object=' + item.imageCoverPath" class="img-fluid img-portfolio" alt="" />
+                <img [src]="env + '/files/get?object=' + item?.image_cover_path[0].imageName" class="img-fluid img-portfolio" alt="" />
               </div>
               <div>
                 <h5 class="fw-bold">{{ item.title}}</h5>
