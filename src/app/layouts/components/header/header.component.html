@@ -1,33 +1,27 @@
 <header class="sticky-top">
-  <div class="card border-0 bg-light nav-card">
+  <div class="card border-0 bg-dark nav-card">
     <div class="container">
       <nav class="navbar navbar-expand-sm navbar-light">
         <a class="navbar-brand" href="/">
-          <img
-            src="./assets/images/logo/logo1.png"
-            class="img-fluid img-logo"
-            alt=""
-          />
+          <img src="./assets/images/logo/logo2.png" class="img-fluid img-logo" alt="" />
         </a>
-        <button
-          class="navbar-toggler d-lg-none"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapsibleNavId"
-          aria-controls="collapsibleNavId"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        ></button>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+          aria-label="Toggle navigation"></button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
-          <ul class="navbar-nav me-auto mt-2 mt-lg-0"></ul>
+          <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+          </ul>
           <ul class="navbar-nav mt-2 mt-lg-0">
             <li class="nav-item mt-1 mx-3">
-              <a [class]="route.url == '/' ? 'nav-link active' : 'nav-link'" href="/" aria-current="page"
-                >Accueil</a
-              >
+              <a [class]="route.url == '/' ? 'nav-link active' : 'nav-link'" href="/" aria-current="page">Accueil</a>
             </li>
             <li class="nav-item mt-1 mx-3">
-              <a [class]="route.url == '/service' ? 'nav-link active' : 'nav-link'" href="/service">Services</a>
+              <a [class]="route.url == '/service' ? 'nav-link active' : 'nav-link'" href="#">Services</a>
+              <div class="d-flex justify-content-center"
+                style="position: absolute; margin-top: 7px; margin-left: 25px;">
+                <div class="arrow-up">
+                </div>
+              </div>
             </li>
             <li class="nav-item mt-1 mx-3">
               <a [class]="route.url == '/portfolio' ? 'nav-link active' : 'nav-link'" href="/portfolio">Portfolio</a>
@@ -35,10 +29,12 @@
             <li class="nav-item mt-1 mx-3">
               <a [class]="route.url == '/about' ? 'nav-link active' : 'nav-link'" href="/about">A propos</a>
             </li>
+          </ul>
+          <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+          </ul>
+          <ul class="navbar-nav mt-2 mt-lg-0">
             <li class="nav-item ml-4">
-              <a class="nav-link btn btn-primary btn-block w-100" href="/devis"
-                >Demander un devis</a
-              >
+              <a class="nav-link btn btn-primary btn-block w-100" href="/devis">Demander un devis</a>
             </li>
           </ul>
         </div>
@@ -46,3 +42,102 @@
     </div>
   </div>
 </header>
+
+<div>
+  <div class="card border-0 bg-white nav-card">
+
+    <div class="container">
+      <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <!-- <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+          </ul> -->
+          <ul class="navbar-nav mt-2 mt-lg-0">
+            <li class="nav-item  mt-1 mx-3 drop">
+              <a class="nav-link text-dark" href="/" aria-current="page">Communication digitale</a>
+              <div class="drop-content">
+                <ul class="ul">
+                  <li class="li"><a href="/service/1" class="a text-dark">Création Publicitaires</a></li>
+                  <li class="li"><a href="/service/1" class="a text-dark">Stratégie de communication</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item  mt-1 mx-3 drop">
+              <a class="nav-link text-dark" href="/" aria-current="page">Graphisme</a>
+              <div class="drop-content">
+                <ul class="ul">
+                  <li class="li"><a href="/service/1" class="a text-dark">Logo, Branding & Identité visuelle</a></li>
+                  <li class="li"><a href="/service/1" class="a text-dark">Illustration & Maquette 3D</a></li>
+                   <li class="li"><a href="/service/1" class="a text-dark">Décoration intérieur</a></li>
+                  <!-- <li class="li"><a href="/service/1" class="a text-dark"></a></li>
+                  <li class="li"><a href="/service/1" class="a text-dark"></a></li> -->
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item mt-1 mx-3 drop">
+              <a class="nav-link text-dark" href="/service">Evènementiel</a>
+              <div class="drop-content">
+                <ul class="ul">
+                  <li class="li"><a href="/service/1" class="a text-dark">Organisation d'évènement & Placement d'hotesse</a></li>
+                  <!-- <li class="li"><a href="/service/1" class="a text-dark"></a></li> -->
+                  <li class="li"><a href="/service/1" class="a text-dark">Mise en place logistique & Décoration</a></li>
+                  <!-- <li class="li"><a href="/service/1" class="a text-dark">Mise en place logistique</a></li>
+                  <li class="li"><a href="/service/1" class="a text-dark">Décoration</a></li> -->
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item mt-1 mx-3 drop">
+              <a class="nav-link text-dark" href="/portfolio">Solution Information & Réseaux</a>
+              <div class="drop-content">
+                <ul class="ul">
+                  <li class="li"><a href="/service/1" class="a text-dark">Web Design (Figma ou Adobe XD)</a></li>
+                  <li class="li"><a href="/service/1" class="a text-dark">Application Web / Mobile</a></li>
+                  <li class="li"><a href="/service/1" class="a text-dark">Maintenance & Configuration reseaux / Mikrotik</a></li>
+                  <!-- <li class="li"><a href="/service/1" class="a text-dark"></a></li> -->
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item mt-1 mx-3 drop">
+              <a class="nav-link text-dark" href="/about">Formation professionnelle</a>
+              <!-- <div class="drop-content">
+                <ul class="ul">
+                  <li class="li"><a href="/service/1" class="a text-dark">Création de publicités</a></li>
+                  <li class="li"><a href="/service/1" class="a text-dark">Graphisme (Les notions de base, Photoshop,
+                      Illustrator & InDesign)</a></li>
+                  <li class="li"><a href="/service/1" class="a text-dark">Web design (UI/UX) Figma</a></li>
+                  <li class="li"><a href="/service/1" class="a text-dark">Developpement Web</a></li>
+                  <li class="li"><a href="/service/1" class="a text-dark">Microsoft Office (Excel analyse de données,
+                      Excel avancé, Word, PowerPoint)</a></li>
+                </ul>
+              </div> -->
+            </li>
+            <li class="nav-item mt-1 mx-3 drop">
+              <a class="nav-link text-dark" href="/about">Imprimerie</a>
+              <!-- <div class="drop-content">
+                <ul class="ul">
+                  <li class="li"><a href="/service/1" class="a text-dark">Impression numérique</a></li>
+                  <li class="li"><a href="/service/1" class="a text-dark">Serigraphie</a></li>
+                  <li class="li"><a href="/service/1" class="a text-dark">Panneaux signalétique</a></li>
+                  <li class="li"><a href="/service/1" class="a text-dark">Gravure</a></li>
+                  <li class="li"><a href="/service/1" class="a text-dark">Customisation</a></li>
+                  <li class="li"><a href="/service/1" class="a text-dark">Réalisation de trophée</a></li>
+                </ul>
+              </div> -->
+            </li>
+            <li class="nav-item mt-1 mx-3 drop">
+              <a class="nav-link text-dark" href="/about">Service de location</a>
+              <!-- <div class="drop-content">
+                <ul class="ul">
+                  <li class="li"><a href="/service/1" class="a text-dark">Location de materiel / Evènementiel</a></li>
+                  <li class="li"><a href="/service/1" class="a text-dark">Location de Panneaux publicitaire</a></li>
+                  <li class="li"><a href="/service/1" class="a text-dark">Location de voiture</a></li>
+                </ul>
+              </div> -->
+            </li>
+          </ul>
+          <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>

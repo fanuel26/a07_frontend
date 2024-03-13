@@ -1,14 +1,5 @@
 <section class="top">
   <div class="container">
-    <div class="d-flex justify-content-between align-items-center">
-      <div>
-        <div class="bar left">
-          <div class="bary"></div>
-          <h5 class="elephant">Effectuer une demande <br>
-            de devis</h5>
-        </div>
-      </div>
-    </div>
     <div class="row my-5 align-items-center">
       <div class="col-md-5">
         <img src="./assets/images/service/dev.jpg" class="img-fluid" style="border-radius: 5px;" alt="" />
@@ -20,7 +11,8 @@
               <label for="">Nom*</label>
               <input type="text" placeholder="Nom" formControlName="nom" [ngClass]="
               devisForm.get('nom')?.invalid &&
-              devisForm.get('nom')?.touched
+              devisForm.get('no
+              m')?.touched
                 ? 'form-control form-control-lg input is-invalid'
                 : 'form-control form-control-lg input'
             ">

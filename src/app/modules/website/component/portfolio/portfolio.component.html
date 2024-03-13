@@ -2,10 +2,10 @@
   <div class="container">
     <div class="row">
       <div class="col-md-7 my-4">
-        <div class="bar left">
+        <!-- <div class="bar left">
           <div class="bary"></div>
           <h5>Portfolio</h5>
-        </div>
+        </div> -->
         <div class="my-2">
           <h3 class="fw-bold">
             Une approche unique pour résoudre des défis complexes.
@@ -24,362 +24,18 @@
           <i class="mdi mdi-arrow-right mx-4 title"></i> Les Sites Web
         </h3>
       </div> -->
-      <div class="col-md-4 brd border-left border-bottom" *ngFor="let item of dataPortfolio">
+      <div class="col-md-3" *ngFor="let item of dataPortfolio">
         <a href="#" class="text-dark" (click)="getData(item)" style="text-decoration: none;" data-bs-toggle="modal"
           data-bs-target="#detail">
-          <div class="card py-4 px-1 border-0 nav-card">
-            <img [src]="env + '/files/get?object=' + item?.image_cover_path[0].imageName" class="img-fluid img-service"
-              alt="" />
-            <!-- <img src="./assets/images/banner/01.jpg"  alt="" /> -->
-            <h4 class="text-dark mt-4 fw-bold">{{ item.title}}</h4>
-            <!-- <small class="text-primary fw-bold">{{ item.category.name }}</small> -->
-            <div class="mt-3">
-              <!-- <p class="description" style="white-space: pre-line;" [innerHTML]="item.description.substr(0, 1000)"> -->
-              <!-- </p> -->
+          <div class="card border-0 nav-card" style="height: 430px !important;">
+            <img [src]="env + '/files/get?object=' + item?.image_cover_path[0].imageName"
+              class="img-fluid img-portfolio" alt="" />
+            <div class="p-4">
+              <h5 class="text-dark mt-4 fw-bold">{{ item.title}}</h5>
             </div>
           </div>
         </a>
       </div>
-      <!-- <div class="col-md-4 brd border-left border-bottom">
-        <div class="card py-4 px-1 border-0 nav-card">
-          <img
-            src="./assets/images/banner/01.jpg"
-            class="img-fluid img-service"
-            alt=""
-          />
-          <h4 class="text-dark mt-4 fw-bold">Branding</h4>
-          <div class="mt-3">
-            <p class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis, eaque!
-            </p>
-            <button class="btn btn-primary">
-              Lire plus <i class="mdi mdi-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 brd border-left border-bottom">
-        <div class="card py-4 px-1 border-0 nav-card">
-          <img
-            src="./assets/images/banner/01.jpg"
-            class="img-fluid img-service"
-            alt=""
-          />
-          <h4 class="text-dark mt-4 fw-bold">Conception graphique</h4>
-          <div class="mt-3">
-            <p class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis, eaque!
-            </p>
-            <button class="btn btn-primary">
-              Lire plus <i class="mdi mdi-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 brd">
-        <div class="card py-4 px-1 border-0 nav-card">
-          <img
-            src="./assets/images/banner/01.jpg"
-            class="img-fluid img-service"
-            alt=""
-          />
-          <h4 class="text-dark mt-4 fw-bold">Identité visuel</h4>
-          <div class="mt-3">
-            <p class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis, eaque!
-            </p>
-            <button class="btn btn-primary">
-              Lire plus <i class="mdi mdi-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 brd border-left">
-        <div class="card py-4 px-1 border-0 nav-card">
-          <img
-            src="./assets/images/banner/01.jpg"
-            class="img-fluid img-service"
-            alt=""
-          />
-          <h4 class="text-dark mt-4 fw-bold">Campagne Publicitaire</h4>
-          <div class="mt-3">
-            <p class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis, eaque!
-            </p>
-            <button class="btn btn-primary">
-              Lire plus <i class="mdi mdi-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 brd border-left">
-        <div class="card py-4 px-1 border-0 nav-card">
-          <img
-            src="./assets/images/banner/01.jpg"
-            class="img-fluid img-service"
-            alt=""
-          />
-          <h4 class="text-dark mt-4 fw-bold">Illustration</h4>
-          <div class="mt-3">
-            <p class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis, eaque!
-            </p>
-            <button class="btn btn-primary">
-              Lire plus <i class="mdi mdi-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-      </div> -->
-    </div>
-
-    <div class="row top">
-      <!-- <div class="col-md-12 my-4">
-        <h3 class="fw-bold text-primary">
-          <i class="mdi mdi-arrow-right mx-4 title"></i> Identité visuelle
-          de la marque
-        </h3>
-      </div> -->
-      <!-- <div class="col-md-4 brd border-bottom">
-        <div class="card py-4 px-1 border-0 nav-card">
-          <img
-            src="./assets/images/banner/01.jpg"
-            class="img-fluid img-service"
-            alt=""
-          />
-          <h4 class="text-dark mt-4 fw-bold">Strategie de communication</h4>
-          <div class="mt-3">
-            <p class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis, eaque!
-            </p>
-            <button class="btn btn-primary">
-              Lire plus <i class="mdi mdi-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 brd border-left border-bottom">
-        <div class="card py-4 px-1 border-0 nav-card">
-          <img
-            src="./assets/images/banner/01.jpg"
-            class="img-fluid img-service"
-            alt=""
-          />
-          <h4 class="text-dark mt-4 fw-bold">Branding</h4>
-          <div class="mt-3">
-            <p class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis, eaque!
-            </p>
-            <button class="btn btn-primary">
-              Lire plus <i class="mdi mdi-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 brd border-left border-bottom">
-        <div class="card py-4 px-1 border-0 nav-card">
-          <img
-            src="./assets/images/banner/01.jpg"
-            class="img-fluid img-service"
-            alt=""
-          />
-          <h4 class="text-dark mt-4 fw-bold">Conception graphique</h4>
-          <div class="mt-3">
-            <p class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis, eaque!
-            </p>
-            <button class="btn btn-primary">
-              Lire plus <i class="mdi mdi-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 brd">
-        <div class="card py-4 px-1 border-0 nav-card">
-          <img
-            src="./assets/images/banner/01.jpg"
-            class="img-fluid img-service"
-            alt=""
-          />
-          <h4 class="text-dark mt-4 fw-bold">Identité visuel</h4>
-          <div class="mt-3">
-            <p class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis, eaque!
-            </p>
-            <button class="btn btn-primary">
-              Lire plus <i class="mdi mdi-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 brd border-left">
-        <div class="card py-4 px-1 border-0 nav-card">
-          <img
-            src="./assets/images/banner/01.jpg"
-            class="img-fluid img-service"
-            alt=""
-          />
-          <h4 class="text-dark mt-4 fw-bold">Campagne Publicitaire</h4>
-          <div class="mt-3">
-            <p class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis, eaque!
-            </p>
-            <button class="btn btn-primary">
-              Lire plus <i class="mdi mdi-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 brd border-left">
-        <div class="card py-4 px-1 border-0 nav-card">
-          <img
-            src="./assets/images/banner/01.jpg"
-            class="img-fluid img-service"
-            alt=""
-          />
-          <h4 class="text-dark mt-4 fw-bold">Illustration</h4>
-          <div class="mt-3">
-            <p class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis, eaque!
-            </p>
-            <button class="btn btn-primary">
-              Lire plus <i class="mdi mdi-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-      </div> -->
-    </div>
-
-    <div class="row top">
-      <!-- <div class="col-md-12 my-4">
-        <h3 class="fw-bold text-primary">
-          <i class="mdi mdi-arrow-right mx-4 title"></i> Evenementielle
-        </h3>
-      </div> -->
-      <!-- <div class="col-md-4 brd border-bottom">
-        <div class="card py-4 px-1 border-0 nav-card">
-          <img
-            src="./assets/images/banner/01.jpg"
-            class="img-fluid img-service"
-            alt=""
-          />
-          <h4 class="text-dark mt-4 fw-bold">Strategie de communication</h4>
-          <div class="mt-3">
-            <p class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis, eaque!
-            </p>
-            <button class="btn btn-primary">
-              Lire plus <i class="mdi mdi-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 brd border-left border-bottom">
-        <div class="card py-4 px-1 border-0 nav-card">
-          <img
-            src="./assets/images/banner/01.jpg"
-            class="img-fluid img-service"
-            alt=""
-          />
-          <h4 class="text-dark mt-4 fw-bold">Branding</h4>
-          <div class="mt-3">
-            <p class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis, eaque!
-            </p>
-            <button class="btn btn-primary">
-              Lire plus <i class="mdi mdi-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 brd border-left border-bottom">
-        <div class="card py-4 px-1 border-0 nav-card">
-          <img
-            src="./assets/images/banner/01.jpg"
-            class="img-fluid img-service"
-            alt=""
-          />
-          <h4 class="text-dark mt-4 fw-bold">Conception graphique</h4>
-          <div class="mt-3">
-            <p class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis, eaque!
-            </p>
-            <button class="btn btn-primary">
-              Lire plus <i class="mdi mdi-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 brd">
-        <div class="card py-4 px-1 border-0 nav-card">
-          <img
-            src="./assets/images/banner/01.jpg"
-            class="img-fluid img-service"
-            alt=""
-          />
-          <h4 class="text-dark mt-4 fw-bold">Identité visuel</h4>
-          <div class="mt-3">
-            <p class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis, eaque!
-            </p>
-            <button class="btn btn-primary">
-              Lire plus <i class="mdi mdi-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 brd border-left">
-        <div class="card py-4 px-1 border-0 nav-card">
-          <img
-            src="./assets/images/banner/01.jpg"
-            class="img-fluid img-service"
-            alt=""
-          />
-          <h4 class="text-dark mt-4 fw-bold">Campagne Publicitaire</h4>
-          <div class="mt-3">
-            <p class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis, eaque!
-            </p>
-            <button class="btn btn-primary">
-              Lire plus <i class="mdi mdi-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 brd border-left">
-        <div class="card py-4 px-1 border-0 nav-card">
-          <img
-            src="./assets/images/banner/01.jpg"
-            class="img-fluid img-service"
-            alt=""
-          />
-          <h4 class="text-dark mt-4 fw-bold">Illustration</h4>
-          <div class="mt-3">
-            <p class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis, eaque!
-            </p>
-            <button class="btn btn-primary">
-              Lire plus <i class="mdi mdi-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-      </div> -->
     </div>
   </div>
 </section>
@@ -387,27 +43,26 @@
 <!-- Modal -->
 <div class="modal fade" id="detail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-fullscreen">
-    <div class="modal-content">
-      <div class="modal-header">
+    <div class="modal-content bg-light border-0">
+      <!-- <div class="modal-header">
         <h5 class="modal-title text-primary" id="exampleModalLabel">
           {{ dataSelect.title }}
         </h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
+      </div> -->
       <div class="modal-body">
+        <button type="button" class="btn-close text-white" style="position: fixed;" data-bs-dismiss="modal" aria-label="Close">X</button>
         <div class="container">
           <div class="row">
-            <div class="col-md-12 mb-4">
-              <div class="bar left">
-                <div class="bary"></div>
-                <h5>{{ dataSelect.title }}</h5>
-              </div>
-              <div class="my-2">
-                <p class="description" style="white-space: pre-line;" [innerHTML]="dataSelect.description">
-                </p>
-              </div>
-              <div class="my-2" *ngFor="let item of dataSelect.image_cover_path">
-                <img [src]="env + '/files/get?object=' + item.imageName" class="img-fluid" alt="" />
+            <div class="col-md-10 offset-md-1 mb-4">
+            <div class="card border-0 bg-white p-5 my-5">
+                <h5 class="text-primary">{{ dataSelect.title }}</h5>
+                <div class="my-2">
+                  <p class="description text-dark" style="white-space: pre-line;" [innerHTML]="dataSelect.description">
+                  </p>
+                </div>
+                <div class="my-2" *ngFor="let item of dataSelect.image_cover_path">
+                  <img [src]="env + '/files/get?object=' + item.imageName" class="img-fluid" alt="" />
+                </div>
               </div>
             </div>
           </div>
