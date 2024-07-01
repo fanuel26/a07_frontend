@@ -5,8 +5,8 @@
 export const environment = {
   production: false,
 
-  apiUrl: 'http://31.170.165.77:8080/api/v1'
-  // apiUrl: 'https://api.a07.agency/api/v1'
+  // apiUrl: 'http://31.170.165.77:8080/api/v1'
+  apiUrl: 'https://api.a07.agency/api/v1'
   // apiUrl: 'https://jsonplaceholder.typicode.com'
 };
 

@@ -486,6 +486,17 @@ a {
 }
 
 .input {
+  background-color: $white;
+  border-color: $white;
+
+  &:focus {
+    box-shadow: none;
+    background-color: $white;
+    border-color: $primary;
+  }
+}
+
+.input1 {
   background-color: $light;
   border-color: $light;
 

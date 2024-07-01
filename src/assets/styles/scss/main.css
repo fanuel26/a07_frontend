@@ -453,10 +453,20 @@ a:hover {
 }
 
 .input {
+  background-color: #fff;
+  border-color: #fff;
+}
+.input:focus {
+  box-shadow: none;
+  background-color: #fff;
+  border-color: #bd1522;
+}
+
+.input1 {
   background-color: #f1f2f5;
   border-color: #f1f2f5;
 }
-.input:focus {
+.input1:focus {
   box-shadow: none;
   background-color: #f1f2f5;
   border-color: #bd1522;
