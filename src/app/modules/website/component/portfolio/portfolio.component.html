@@ -24,7 +24,7 @@
           <i class="mdi mdi-arrow-right mx-4 title"></i> Les Sites Web
         </h3>
       </div> -->
-      <div class="col-md-3" *ngFor="let item of dataPortfolio">
+      <div class="col-md-3 mt-4" *ngFor="let item of dataPortfolio">
         <a href="#" class="text-dark" (click)="getData(item)" style="text-decoration: none;" data-bs-toggle="modal"
           data-bs-target="#detail">
           <div class="card border-0 nav-card" style="height: 430px !important;">
@@ -53,8 +53,8 @@
         <button type="button" class="btn-close text-white" style="position: fixed;" data-bs-dismiss="modal" aria-label="Close">X</button>
         <div class="container">
           <div class="row">
-            <div class="col-md-10 offset-md-1 mb-4">
-            <div class="card border-0 bg-white p-5 my-5">
+            <div class="col-12 col-md-10 offset-md-1 mb-4">
+            <div class="card border-0 bg-white p-md-5 p-2 my-5">
                 <h5 class="text-primary">{{ dataSelect.title }}</h5>
                 <div class="my-2">
                   <p class="description text-dark" style="white-space: pre-line;" [innerHTML]="dataSelect.description">
